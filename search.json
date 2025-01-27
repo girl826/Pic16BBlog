@@ -7,11 +7,11 @@
     "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "myblog",
+    "objectID": "posts/palmer/index.html",
+    "href": "posts/palmer/index.html",
+    "title": "Data Visualization",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nJan 26, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 23, 2025\n\n\nCaroline Ives\n\n\n\n\n\n\nNo matching items"
+    "text": "Introduction\nToday, I am going to explain how to create a data visualization using Python. In this example, I will be creating a scatter plot using data from the Palmer Penguins data set.\n\n\nImporting the data\nTo start working with the palmer penguins data, first you need to import the data, as well as the functions necessary to analyze it. The two packages we will need are plotly.express (to create the function) and pandas (to read the file). Then use the pandas read_csv function to read the file wherever it is stored online or on your computer (use “” for the former and r’’ for the later).\n\nfrom plotly import express as px\nimport pandas as pd\nurl = \"https://raw.githubusercontent.com/pic16b-ucla/24W/main/datasets/palmer_penguins.csv\"\npenguins = pd.read_csv(url)\n\n\n\nCreating a visualization\nIn this tutorial, we will use the “scatter” function to create a scatter plot to analyze the data. This function has a few possible parameters, but the ones we will use are “data_frame”, “x”, “y” and “color”. Set the data_frame paramater to whatever you named the data, in this example it would be “penguins”. Then, choose two different numerical variables from the set to be the x and y values. Then a third variable, not necessarily numerical, to determine the color of each point. Make sure you use the exact title of the column from the original csv file when setting the parameters. In this example, we use x = “Flipper Length (mm)”, y = “Body Mass (g)”, color = “Island”. Then run the fig.show() function to display your plot.\n\nfig = px.scatter(data_frame=penguins, \n                 x = \"Flipper Length (mm)\",\n                 y = \"Body Mass (g)\",\n                 color = \"Island\")\nfig.write_image(r\"C:\\Users\\ives7\\Projects\\Pic16B\\myblog\\posts\\palmer\\figure.jpg\") #Used to save image as jpg for display on this site, in other contexts use fig.show()\n\n\n\n\nConclusion\nThis scatter plot, along with other data visualizations and graphs like it, makes the task of analyzing data more simple and understandable, and is a valubale skill to learn using Python."
   },
   {
     "objectID": "about.html",
@@ -19,6 +19,13 @@
     "title": "About",
     "section": "",
     "text": "About this blog"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "myblog",
+    "section": "",
+    "text": "Data Visualization\n\n\n\n\n\n\nweek 4\n\n\nhomework\n\n\n\n\n\n\n\n\n\nJan 27, 2025\n\n\nCaroline\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nJan 26, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 23, 2025\n\n\nCaroline Ives\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/post-with-code/index.html",
